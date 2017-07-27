@@ -17,6 +17,8 @@ gulp.task("concatScripts", function () {
 // tasks
 
 gulp.task("minifyScripts", function () {
+	// calling uglify to minify app.js and then dump what's in mem to disk
+	// placing the output in the JS folder
 	gulp.src("js/app.js")
 		.pipe(uglify()).pipe(gulp.dest('js'));
 });
