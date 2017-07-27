@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
 
 // use gulp to combine multiple JS scripts into one file
 gulp.task("concatScripts", function () {
@@ -12,6 +13,12 @@ gulp.task("concatScripts", function () {
 	    .pipe(concat("app.js"))
 	    // dest method writes to disk
 		.pipe(gulp.dest("js"))
+});
+// tasks
+
+gulp.task("minifyScripts", function () {
+	gulp.src("js/app.js")
+		.pipe(uglify()).pipe(gulp.dest('js'));
 });
 
 gulp.task("default", ["hello"], function () {
