@@ -27,6 +27,12 @@ gulp.task("minifyScripts", function () {
 	    .pipe(gulp.dest("js"));
 });
 
+gulp.task('compileSass', function () {
+	gulp.src("scss/application.scss")
+		.pipe(sass())
+		.pipe(gulp.dest('css'))
+});
+
 gulp.task("default", ["hello"], function () {
 	console.log("This is the default task!")
 });
