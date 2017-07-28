@@ -5,6 +5,7 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
+var map = require('gulp-sourcemaps');
 
 // use gulp to combine multiple JS scripts into one file
 gulp.task("concatScripts", function () {
