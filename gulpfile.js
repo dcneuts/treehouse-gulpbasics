@@ -9,7 +9,7 @@ var maps = require('gulp-sourcemaps');
 
 // use gulp to combine multiple JS scripts into one file
 gulp.task("concatScripts", function () {
-	gulp.src([
+	return gulp.src([
 		'js/jquery.js',
 		'js/sticky/jquery.sticky.js',
 		'js/main.js'])
@@ -23,17 +23,19 @@ gulp.task("concatScripts", function () {
 		.pipe(gulp.dest("js"))
 });
 
-gulp.task("minifyScripts", function () {
+// below I placed in concat as a dependency of minify, but will
+// now require return statements in each task function block
+gulp.task("minifyScripts", ["concatScripts"], function () {
 	// calling uglify to minify app.js and then dump what's in mem to disk
 	// placing the output in the JS folder
-	gulp.src("js/app.js").pipe(uglify())
+	return gulp.src("js/app.js").pipe(uglify())
 	    //needed to add gulp rename to not overwrite main js
 	    .pipe(rename('app.min.js'))
 	    .pipe(gulp.dest("js"));
 });
 
 gulp.task('compileSass', function () {
-	gulp.src("scss/application.scss")
+	return gulp.src("scss/application.scss")
 		// added maps.init module to this function to create maps when compiled
 		.pipe(maps.init())
 		.pipe(sass())
