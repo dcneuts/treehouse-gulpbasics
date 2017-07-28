@@ -43,6 +43,8 @@ gulp.task('compileSass', function () {
 		.pipe(gulp.dest('css'))
 });
 
+gulp.task("build", ['concatScripts', 'minifyScripts', 'compileSass']);
+
 gulp.task("default", ["hello"], function () {
 	console.log("This is the default task!")
 });
