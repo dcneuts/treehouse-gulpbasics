@@ -30,7 +30,12 @@ gulp.task("minifyScripts", function () {
 
 gulp.task('compileSass', function () {
 	gulp.src("scss/application.scss")
+		// added maps.init module to this function to create maps when compiled
+		.pipe(maps.init())
 		.pipe(sass())
+		// path is relative to output directory
+		// will output maps in same folder as combined css
+		.pipe(maps.write('./'))
 		.pipe(gulp.dest('css'))
 });
 
