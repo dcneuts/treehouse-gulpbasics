@@ -13,11 +13,15 @@ gulp.task("concatScripts", function () {
 		'js/jquery.js',
 		'js/sticky/jquery.sticky.js',
 		'js/main.js'])
+		// adding JS maps on line below when concat is run
+		.pipe(maps.init())
 	    .pipe(concat("app.js"))
+		// using write method to write the file, use relative path
+		// to show where the maps should live
+		.pipe(maps.write('./'))
 	    // dest method writes to disk
 		.pipe(gulp.dest("js"))
 });
-// tasks
 
 gulp.task("minifyScripts", function () {
 	// calling uglify to minify app.js and then dump what's in mem to disk
