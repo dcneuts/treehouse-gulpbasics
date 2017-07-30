@@ -55,7 +55,7 @@ gulp.task('watchSass', function () {
 });
 
 gulp.task('clean', function () {
-	del('dist');
+	del(['dist', 'css/application.css*', 'js/app*.js*']);
 });
 
 gulp.task("build", ['concatScripts', 'minifyScripts', 'compileSass'], function() {
@@ -64,4 +64,6 @@ gulp.task("build", ['concatScripts', 'minifyScripts', 'compileSass'], function()
 		.pipe(gulp.dest('dist'));
 });
 
-gulp.task("default", ['build']);
+gulp.task("default", ["clean"], function () {
+	gulp.start('build');
+});
