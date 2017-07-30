@@ -54,7 +54,7 @@ gulp.task('watchFiles', function () {
 
 	// First block watches SCSS and runs compileSass when needed
 	// Second block runs concat when JS changes
-	gulp.watch('scss/**/*.scss', 'js/main.js', ['compileSass']);
+	gulp.watch('scss/**/*.scss', ['js/main.js', 'compileSass']);
 	gulp.watch ('js/main.js', ['concatScripts']);
 });
 
@@ -67,6 +67,8 @@ gulp.task("build", ['concatScripts', 'minifyScripts', 'compileSass'], function()
 	return gulp.src(["css/application.css", "js/app.min.js", 'index.html', "img/**", "fonts/**"], {base: "./"})
 		.pipe(gulp.dest('dist'));
 });
+
+gulp.task('serve', ['watchFiles']);
 
 gulp.task("default", ["clean"], function () {
 	gulp.start('build');
