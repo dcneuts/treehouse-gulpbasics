@@ -46,12 +46,16 @@ gulp.task('compileSass', function () {
 		.pipe(gulp.dest('css'))
 });
 
-gulp.task('watchSass', function () {
+gulp.task('watchFiles', function () {
 	// watch task doesn't have another task depend on it
 	// therefore no return needed, unlike the others
 	// Below uses a globbing pattern to match files
 	// Instead of listing all of them manually in array
-	gulp.watch('scss/**/*.scss', ['compileSass']);
+
+	// First block watches SCSS and runs compileSass when needed
+	// Second block runs concat when JS changes
+	gulp.watch('scss/**/*.scss', 'js/main.js', ['compileSass']);
+	gulp.watch ('js/main.js', ['concatScripts']);
 });
 
 gulp.task('clean', function () {

@@ -23,28 +23,8 @@
       <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="58" column="3" lean-forward="false" selection-start-line="58" selection-start-column="3" selection-end-line="58" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/application.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="237">
+              <caret line="56" column="61" lean-forward="false" selection-start-line="56" selection-start-column="61" selection-end-line="56" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -150,36 +130,13 @@
             <path>
               <item name="gulp-basics" type="b2602c69:ProjectViewProjectNode" />
               <item name="gulp-basics" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application.css" type="620a8d5e:NestingTreeNode" />
             </path>
             <path>
               <item name="gulp-basics" type="b2602c69:ProjectViewProjectNode" />
               <item name="gulp-basics" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app.js" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="gulp-basics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gulp-basics" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="scss" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="gulp-basics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gulp-basics" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="scss" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="base" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="gulp-basics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gulp-basics" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="scss" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="gulp-basics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gulp-basics" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="scss" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="layout" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="dist" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -226,7 +183,7 @@
       <workItem from="1501134248580" duration="3722000" />
       <workItem from="1501222177750" duration="2160000" />
       <workItem from="1501225627930" duration="2635000" />
-      <workItem from="1501385079649" duration="2214000" />
+      <workItem from="1501385079649" duration="3797000" />
     </task>
     <task id="LOCAL-00001" summary="Initiated NPM to create package.json">
       <created>1500966160661</created>
@@ -354,11 +311,25 @@
       <option name="project" value="LOCAL" />
       <updated>1501385482166</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added cleaning task to distribution folder using gulp.del method">
+      <created>1501388330182</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1501388330182</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Added clean to the default gulp action as a dependency">
+      <created>1501389059937</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1501389059937</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13645000" />
+    <option name="totallyTimeSpent" value="15228000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -436,7 +407,9 @@
     <MESSAGE value="Created dependency of minify to keep tasks in order, also added return statements" />
     <MESSAGE value="Added build as a dependency of default" />
     <MESSAGE value="Added watchSass task and related function using globbing technique to avoid having to list out every single SCSS file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added watchSass task and related function using globbing technique to avoid having to list out every single SCSS file" />
+    <MESSAGE value="Added cleaning task to distribution folder using gulp.del method" />
+    <MESSAGE value="Added clean to the default gulp action as a dependency" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added clean to the default gulp action as a dependency" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -642,8 +615,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="58" column="3" lean-forward="false" selection-start-line="58" selection-start-column="3" selection-end-line="58" selection-end-column="3" />
+        <state relative-caret-position="237">
+          <caret line="56" column="61" lean-forward="false" selection-start-line="56" selection-start-column="61" selection-end-line="56" selection-end-column="61" />
           <folding />
         </state>
       </provider>
