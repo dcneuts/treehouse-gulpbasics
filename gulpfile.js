@@ -6,6 +6,7 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var maps = require('gulp-sourcemaps');
+var del = require('del');
 
 // use gulp to combine multiple JS scripts into one file
 gulp.task("concatScripts", function () {
@@ -53,6 +54,14 @@ gulp.task('watchSass', function () {
 	gulp.watch('scss/**/*.scss', ['compileSass']);
 });
 
-gulp.task("build", ['concatScripts', 'minifyScripts', 'compileSass']);
+gulp.task('clean', function () {
+	del('dist');
+});
+
+gulp.task("build", ['concatScripts', 'minifyScripts', 'compileSass'], function() {
+	// base keeps directory structure intact and provides relative base for tree
+	return gulp.src(["css/application.css", "js/app.min.js", 'index.html', "img/**", "fonts/**"], {base: "./"})
+		.pipe(gulp.dest('dist'));
+});
 
 gulp.task("default", ['build']);

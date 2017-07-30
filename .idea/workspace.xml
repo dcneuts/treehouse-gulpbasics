@@ -23,8 +23,8 @@
       <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="52" column="50" lean-forward="false" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
+            <state relative-caret-position="303">
+              <caret line="58" column="3" lean-forward="false" selection-start-line="58" selection-start-column="3" selection-end-line="58" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -226,7 +226,7 @@
       <workItem from="1501134248580" duration="3722000" />
       <workItem from="1501222177750" duration="2160000" />
       <workItem from="1501225627930" duration="2635000" />
-      <workItem from="1501385079649" duration="357000" />
+      <workItem from="1501385079649" duration="2214000" />
     </task>
     <task id="LOCAL-00001" summary="Initiated NPM to create package.json">
       <created>1500966160661</created>
@@ -347,11 +347,18 @@
       <option name="project" value="LOCAL" />
       <updated>1501228264762</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Added watchSass task and related function using globbing technique to avoid having to list out every single SCSS file">
+      <created>1501385482165</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1501385482166</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11788000" />
+    <option name="totallyTimeSpent" value="13645000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -428,7 +435,8 @@
     <MESSAGE value="Added build function, but tasks are now running simultaneously and out of order" />
     <MESSAGE value="Created dependency of minify to keep tasks in order, also added return statements" />
     <MESSAGE value="Added build as a dependency of default" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added build as a dependency of default" />
+    <MESSAGE value="Added watchSass task and related function using globbing technique to avoid having to list out every single SCSS file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added watchSass task and related function using globbing technique to avoid having to list out every single SCSS file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -634,8 +642,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="52" column="50" lean-forward="false" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
+        <state relative-caret-position="303">
+          <caret line="58" column="3" lean-forward="false" selection-start-line="58" selection-start-column="3" selection-end-line="58" selection-end-column="3" />
           <folding />
         </state>
       </provider>
